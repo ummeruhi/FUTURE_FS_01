@@ -3,13 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Umme Ruhi - Computer Science student & aspiring Full Stack Developer | Portfolio with academic projects in web development"/>
+  <meta name="description" content="Umme Ruhi — Computer Science student & aspiring Full Stack Developer. Portfolio showcasing academic projects in web development."/>
+  <meta name="author" content="Umme Ruhi"/>
+  <meta name="keywords" content="Umme Ruhi, Full Stack Developer, Web Developer, Portfolio, Future Interns, PHP, MySQL, JavaScript, React, Node.js"/>
+  <meta name="theme-color" content="#9f7aea"/>
+
+  <meta property="og:title" content="Umme Ruhi | Aspiring Full Stack Developer"/>
+  <meta property="og:description" content="Portfolio showcasing academic projects, skills, and contact information."/>
+  <meta property="og:type" content="website"/>
+
   <title>Umme Ruhi | Aspiring Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Umme Ruhi",
+    "jobTitle":"Aspiring Full Stack Developer",
+    "sameAs":[
+      "https://github.com/ummeruhi",
+      "https://www.linkedin.com/in/umme-ruhi-3a784a300"
+    ]
+  }
+  </script>
 </head>
+
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="loader">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+    <p class="loader-text">Loading portfolio…</p>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
   <!-- Theme Toggle -->
   <button class="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
@@ -17,10 +54,11 @@
   </button>
 
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary">
     <div class="container">
-      <div class="logo">UMME RUHI</div>
-      <ul class="nav-links">
+      <a class="logo" href="#home" aria-label="Go to home">UMME RUHI</a>
+
+      <ul class="nav-links" aria-label="Site sections">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -28,27 +66,35 @@
         <li><a href="#learning">Learning</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
   <!-- Hero -->
   <section id="home" class="hero">
-    <canvas id="particles-canvas"></canvas>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
     <div class="container hero-content">
+      
       <h1>Hi, I'm <span class="highlight">Umme Ruhi</span></h1>
       <h2 class="typing">Aspiring Full Stack Developer<span class="cursor"></span></h2>
-      <p>Computer Science student passionate about building clean, responsive and functional web applications through hands-on academic projects and continuous learning.</p>
+      <p>
+        Computer Science student passionate about building clean, responsive and functional web applications
+        through hands-on academic projects and continuous learning.
+      </p>
+
       <div class="hero-buttons">
         <a href="#projects" class="btn primary">View Projects</a>
         <a href="#contact" class="btn outline">Contact Me</a>
       </div>
-    </div>
+
+        </div>
   </section>
+
+  
 
   <!-- About -->
   <section id="about" class="about section-hidden">
@@ -56,15 +102,29 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>I'm a Computer Science student from Ballari, Karnataka, deeply interested in full-stack web development. I enjoy turning ideas into working applications and continuously improving my skills through structured learning and real projects.</p>
+          <p>
+            I'm a Computer Science student from Ballari, Karnataka, deeply interested in full-stack web development.
+            I enjoy turning ideas into working applications and continuously improving my skills through structured learning and real projects.
+          </p>
 
-          <p>Through the <strong>Future Interns 2026</strong> program and personal practice, I've built several complete applications — strengthening both frontend design and backend logic.</p>
+          <p>
+            Through the <strong>Future Interns 2026</strong> program and personal practice, I've built several complete applications — strengthening both frontend design and backend logic.
+          </p>
 
-          <p>My current focus is on writing cleaner, more maintainable code, understanding full request-response cycles, and preparing to contribute to real-world development projects.</p>
+          <p>
+            My current focus is on writing cleaner, more maintainable code, understanding full request-response cycles, and preparing to contribute to real-world development projects.
+          </p>
 
           <p><strong>Goal:</strong> Become a reliable full-stack developer capable of building end-to-end solutions and eventually helping other students from similar backgrounds.</p>
+
+          <div class="about-cta">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn outline" href="#contact">Let’s connect</a>
+          </div>
         </div>
-        <div class="avatar-gradient about-monogram">UR</div>
+
+        <!-- NO PHOTO NEEDED -->
+        <div class="avatar-gradient about-monogram" aria-label="Umme Ruhi monogram">UR</div>
       </div>
     </div>
   </section>
@@ -123,10 +183,11 @@
   <section id="projects" class="projects section-hidden">
     <div class="container">
       <h2 class="section-title">Academic Projects</h2>
+
       <div class="projects-grid">
 
         <div class="project-card">
-          <img src="images/hospital.png" alt="Hospital Management System" class="project-img">
+          <img src="images/hospital.png" alt="Hospital Management System" class="project-img" loading="lazy">
           <div class="project-info">
             <h3>Hospital Management System</h3>
             <p>Web application for managing patients, doctors, appointments, rooms and basic admin functionalities.</p>
@@ -134,13 +195,13 @@
               <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
             <div class="project-links">
-               <a href="https://github.com/ummeruhi/hospital_management_system" target="_blank">GitHub</a>
+              <a href="https://github.com/ummeruhi/hospital_management_system" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="images/hotel.png" alt="Hotel Management System" class="project-img">
+          <img src="images/hotel.png" alt="Hotel Management System" class="project-img" loading="lazy">
           <div class="project-info">
             <h3>Hotel Management System</h3>
             <p>Application to handle room bookings, availability, check-in/check-out and admin dashboard.</p>
@@ -148,28 +209,27 @@
               <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/ummeruhi/hotel_management_system" target="_blank">GitHub</a>
+              <a href="https://github.com/ummeruhi/hotel_management_system" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- Smart Travel Companion -->
-      <div class="project-card">
-        <img src="images/travel.png" alt="Smart Travel Companion Screenshot" class="project-img">
-        <div class="project-info">
-          <h3>Smart Travel Companion</h3>
-          <p>Web app that suggests travel plans, hotels, transport, and events for selected destinations.</p>
-          <div class="project-tags">
-            <span>React</span><span>Node.js</span><span>APIs</span>
-          </div>
-          <div class="project-links">
-           <a href="https://github.com/ummeruhi/smart_travel_planner" target="_blank">GitHub</a>
+        <div class="project-card">
+          <img src="images/travel.png" alt="Smart Travel Companion Screenshot" class="project-img" loading="lazy">
+          <div class="project-info">
+            <h3>Smart Travel Companion</h3>
+            <p>Web app that suggests travel plans, hotels, transport, and events for selected destinations.</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>APIs</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ummeruhi/smart_travel_planner" target="_blank" rel="noopener">GitHub</a>
+            </div>
           </div>
         </div>
-      </div>
 
         <div class="project-card">
-          <img src="images/ecommerce.png" alt="E-commerce Website" class="project-img">
+          <img src="images/ecommerce.png" alt="E-commerce Website" class="project-img" loading="lazy">
           <div class="project-info">
             <h3>E-commerce Website</h3>
             <p>Online store simulation with product listing, cart functionality and basic checkout flow.</p>
@@ -177,27 +237,28 @@
               <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
             <div class="project-links">
-               <a href="https://github.com/ummeruhi/e_commerce" target="_blank">GitHub</a>
+              <a href="https://github.com/ummeruhi/e_commerce" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- AI Image Generator -->
-      <div class="project-card">
-        <img src="images/ai-image.png" alt="AI Image Generator Screenshot" class="project-img">
-        <div class="project-info">
-          <h3>AI Image Generator</h3>
-          <p>Frontend-only app that generates images using AI APIs (backend not implemented).</p>
-          <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          <div class="project-links">
-             <a href="https://github.com/ummeruhi/ai_image_generator" target="_blank">GitHub</a>
+        <div class="project-card">
+          <img src="images/ai-image.png" alt="AI Image Generator Screenshot" class="project-img" loading="lazy">
+          <div class="project-info">
+            <h3>AI Image Generator</h3>
+            <p>Frontend-only app that generates images using AI APIs (backend not implemented).</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ummeruhi/ai_image_generator" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://ummeruhi.github.io/ai_image_generator/" target="_blank" rel="noopener">Live</a>
+            </div>
           </div>
         </div>
-      </div>
+
         <div class="project-card">
-          <img src="images/portfolio.png" alt="Personal Portfolio" class="project-img">
+          <img src="images/portfolio.png" alt="Personal Portfolio" class="project-img" loading="lazy">
           <div class="project-info">
             <h3>Personal Portfolio Website</h3>
             <p>Responsive single-page portfolio with dark mode, smooth animations and contact form — created for Future Interns Task 1.</p>
@@ -205,7 +266,7 @@
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
             <div class="project-links">
-               <a href="https://github.com/ummeruhi/FUTURE_FS_01" target="_blank">GitHub</a>
+              <a href="https://github.com/ummeruhi/FUTURE_FS_01" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
@@ -215,50 +276,48 @@
   </section>
 
   <!-- Learning Journey -->
-  <section id="learning" class="section-hidden" style="padding: 6rem 0; background: var(--card);">
+  <section id="learning" class="learning section-hidden">
     <div class="container">
       <h2 class="section-title">Learning Journey</h2>
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 1.15rem; margin-bottom: 2.5rem; color: var(--text-light);">
-          I believe consistent practice and reflection are the fastest ways to grow as a developer. Right now I'm focusing on:
-        </p>
-        <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; font-size: 1.05rem;">
-          <li style="background: var(--primary); color: white; padding: 0.7rem 1.5rem; border-radius: 50px;">Building projects regularly</li>
-          <li style="background: var(--primary); color: white; padding: 0.7rem 1.5rem; border-radius: 50px;">Improving code quality & structure</li>
-          <li style="background: var(--primary); color: white; padding: 0.7rem 1.5rem; border-radius: 50px;">Better debugging & problem solving</li>
-          <li style="background: var(--primary); color: white; padding: 0.7rem 1.5rem; border-radius: 50px;">Learning modern backend patterns</li>
+      <div class="learning-wrap">
+        <p>I believe consistent practice and reflection are the fastest ways to grow as a developer. Right now I'm focusing on:</p>
+        <ul class="pill-list">
+          <li>Building projects regularly</li>
+          <li>Improving code quality & structure</li>
+          <li>Better debugging & problem solving</li>
+          <li>Learning modern backend patterns</li>
         </ul>
       </div>
     </div>
   </section>
 
-    <!-- Contact -->
+  <!-- Contact -->
   <section id="contact" class="contact section-hidden">
     <div class="container">
       <h2 class="section-title" style="text-align: center;">Get in Touch</h2>
-      
+
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjgeooev" method="POST">
         <input type="text" name="name" placeholder="Name" required/>
         <input type="email" name="_replyto" placeholder="Email" required/>
         <textarea name="message" placeholder="Message" rows="5" required></textarea>
         <input type="hidden" name="_subject" value="New message from Umme Ruhi Portfolio"/>
         <button type="submit" class="btn primary">Send Message</button>
-        <p id="form-status" style="margin-top: 1.5rem; font-weight: 500; text-align: center; min-height: 1.5rem;"></p>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
 
       <div class="social-links">
-        <a href="https://github.com/ummeruhi"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/umme-ruhi-3a784a300"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ummeruhi" target="_blank" rel="noopener" aria-label="Open GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/umme-ruhi-3a784a300" target="_blank" rel="noopener" aria-label="Open LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </section>
 
   <!-- Back to Top -->
-  <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <footer>
     <div class="container">
-      <p>© 2026 UMME RUHI | Built with ❤️ for Future Interns</p>
+      <p>© <span id="year"></span> UMME RUHI | Built with ❤️ for Future Interns</p>
     </div>
   </footer>
 
