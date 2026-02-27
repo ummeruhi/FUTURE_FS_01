@@ -80,6 +80,8 @@ Optimized for:
 -Student-friendly (no resume / no photo needed)
 -Internship-ready presentation
 
+---
+
 ## 🚀 Future Improvements
 
 -📝 Add a “Certificates” section
