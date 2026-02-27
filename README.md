@@ -30,7 +30,7 @@ It was created as part of **Future Interns — Full Stack Web Development (Task 
 ## 🚀 Live Demo
 
 🔗 **Add your deployed link here**  
-Example: [https://yourusername.github.io/your-repo-name/](https://ummeruhi.github.io/FUTURE_FS_01/)
+Example: (https://ummeruhi.github.io/FUTURE_FS_01/)
 
 ---
 
