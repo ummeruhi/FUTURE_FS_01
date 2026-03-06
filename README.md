@@ -23,7 +23,7 @@ This is my **personal portfolio website** built to showcase:
 - A clean professional developer profile  
 - A simple way to contact me  
 
-It was created as part of **Future Interns — Full Stack Web Development (Task 1 / 2026)** and polished to look **internship-ready**.
+It was created as part of **InternSpark — Full Stack Web Development (Task 1 / 2026)** and polished to look **internship-ready**.
 
 ---
 
